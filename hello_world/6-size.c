@@ -2,9 +2,10 @@
 
 /**
  * main - Entry point
- * Description : 'This program prints the size of
- * various types on the computer'
- * Return : Always 0 (Success)
+ *
+ * Description: 'the program's description'
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
