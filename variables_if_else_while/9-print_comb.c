@@ -13,6 +13,7 @@ int main(void)
 	{
 		putchar(n);
 		putchar(44);
+		putchar(32);
 		n++;
 	}
 	putchar('\n');
