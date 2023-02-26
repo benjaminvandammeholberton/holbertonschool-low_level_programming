@@ -20,7 +20,10 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
-		printf("%ld, ", c);
+		if (i < 49)
+			printf("%ld, ", c);
+		else
+			printf("%ld", c);
 	}
 	printf("\n");
 	return (0);
