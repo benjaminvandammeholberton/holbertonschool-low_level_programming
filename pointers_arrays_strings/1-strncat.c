@@ -4,7 +4,7 @@
  * @dest : destination string
  * @src : source string
  * @n : number of bytes concatenated from src.
- * Retrun: pointer (pointer on dest)
+ * Return: pointer (pointer on dest)
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -14,10 +14,10 @@ char *_strncat(char *dest, char *src, int n)
 	char *pointeur = dest;
 
 	for (i = 0 ; dest[i] != '\0' ; i++)
-	     l++;
+		l++;
 
 	for (i = 0 ; i < n && src[i] != 0 ; i++)
-		dest[i + l] = src [i];
+		dest[i + l] = src[i];
 
 	return (pointeur);
 }
