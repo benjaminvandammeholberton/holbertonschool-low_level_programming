@@ -70,7 +70,7 @@ reklaW notloC
 julien@ubuntu:~/Recursion$
 ```
 
-* 2 - Write a function that returns the length of a string.
+### 2 - Write a function that returns the length of a string.
   * Prototype: int _strlen_recursion(char *s);
 ```
 julien@ubuntu:~/Recursion$ cat 2-main.c 
@@ -95,7 +95,7 @@ julien@ubuntu:~/Recursion$ ./2-strlen_recursion
 14
 julien@ubuntu:~/Recursion$ 
 ```
-* 3 - Write a function that returns the factorial of a given number.
+### 3 - Write a function that returns the factorial of a given number.
   * Prototype: int factorial(int n);
   * If n is lower than 0, the function should return -1 to indicate an error
   * Factorial of 0 is 1
@@ -131,7 +131,7 @@ julien@ubuntu:~/Recursion$ ./3-factorial
 -1
 julien@ubuntu:~/Recursion$
 ```
-* 4 - Write a function that returns the value of x raised to the power of y.
+### 4 - Write a function that returns the value of x raised to the power of y.
   * Prototype: int _pow_recursion(int x, int y);
   * If y is lower than 0, the function should return -1
 ```
@@ -172,7 +172,7 @@ julien@ubuntu:~/Recursion$ ./4-pow
 -125
 julien@ubuntu:~/Recursion$ 
 ```
-* 5 - Write a function that returns the natural square root of a number.
+### 5 - Write a function that returns the natural square root of a number.
   * Prototype: int _sqrt_recursion(int n);
   * If n does not have a natural square root, the function should return -1
 ```
@@ -213,7 +213,7 @@ julien@ubuntu:~/Recursion$ ./5-sqrt
 -1
 julien@ubuntu:~/Recursion$ 
 ```
-* 6 - Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
+### 6 - Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
   * Prototype: int is_prime_number(int n);
 ```
 julien@ubuntu:~/Recursion$ cat 6-main.c
