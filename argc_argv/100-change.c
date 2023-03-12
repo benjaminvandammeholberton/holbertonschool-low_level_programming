@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		n = atoi(argv[1]);
-		
+
 		if (n < 0)
 		{
 			printf("%d\n", c);
