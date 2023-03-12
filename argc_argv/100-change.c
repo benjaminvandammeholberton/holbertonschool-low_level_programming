@@ -19,13 +19,14 @@ int main(int argc, char **argv)
 
 	if (argc == 2)
 	{
+		n = atoi(argv[1]);
+		
 		if (n < 0)
 		{
 			printf("%d\n", c);
 			return (0);
 		}
 
-		n = atoi(argv[1]);
 		c = n / 25;
 		r = n % 25;
 
