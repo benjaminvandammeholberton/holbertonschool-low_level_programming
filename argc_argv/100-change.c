@@ -17,10 +17,11 @@ if (argc != 2)
 	return (1);
 }
 	
-int n = atoi(argv[1]);
+int n;
 int c = 0;
 int r = 0;
 
+n = atoi(argv[1]);
 c = n / 25;
 r = n % 25;
 if (r == 0)
