@@ -15,15 +15,14 @@ char *str_concat(char *s1, char *s2)
 	char *strcon;
 	int i = 0, j = 0, k = 0, l1 = 0, l2 = 0;
 
-		if (s1 != NULL)
-	for (k = 0 ; s1[k] != 0 ; k++)
+	if (s1 != NULL)
+		for (k = 0 ; s1[k] != 0 ; k++)
 			l1 = l1 + 1;
-		
-		if (s2 != NULL)
-	for (k = 0 ; s2[k] != 0 ; k++)
+
+	if (s2 != NULL)
+		for (k = 0 ; s2[k] != 0 ; k++)
 			l2 = l2 + 1;
 
-		
 
 	strcon = malloc(sizeof(*strcon) * (l1 + l2 + 1));
 
