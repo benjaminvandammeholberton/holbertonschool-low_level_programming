@@ -23,7 +23,9 @@ In the following examples, the main.c files are shown as examples. You can use t
 The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 Don’t forget to push your header file
 
-## 0. Write a function that allocates memory using malloc.
+## Tasks
+
+### 0. Write a function that allocates memory using malloc.
 
 * Prototype: void *malloc_checked(unsigned int b);
 * Returns a pointer to the allocated memory
@@ -73,7 +75,7 @@ julien@ubuntu:~/0x0b. more malloc, free$ echo $?
 julien@ubuntu:~/0x0b. more malloc, free$ 
 ```
 
-## 1. Write a function that concatenates two strings.
+### 1. Write a function that concatenates two strings.
 
 * Prototype: char *string_nconcat(char *s1, char *s2, unsigned int n);
 * The returned pointer shall point to a newly allocated space in memory, which contains s1, followed by the first n bytes of s2, and null terminated
@@ -107,7 +109,7 @@ Best School
 julien@ubuntu:~/0x0b. more malloc, free$
 ```
 
-## 2. Write a function that allocates memory for an array, using malloc.
+### 2. Write a function that allocates memory for an array, using malloc.
 
 * Prototype: void *_calloc(unsigned int nmemb, unsigned int size);
 * The _calloc function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.
@@ -184,7 +186,7 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./2-calloc
 julien@ubuntu:~/0x0b. more malloc, free$
 ```
 
-## Write a function that creates an array of integers.
+### 3. Write a function that creates an array of integers.
 
 * Prototype: int *array_range(int min, int max);
 * The array created should contain all the values from min (included) to max (included), ordered from min to max
@@ -248,7 +250,7 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./3-array_range
 julien@ubuntu:~/0x0b. more malloc, free$
 ```
 
-## 4. Write a function that reallocates a memory block using malloc and free
+### 4. Write a function that reallocates a memory block using malloc and free
 
 * Prototype: void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 * where ptr is a pointer to the memory previously allocated with a call to malloc: malloc(old_size)
@@ -334,7 +336,7 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./100-realloc
 julien@ubuntu:~/0x0b. more malloc, free$ 
 ```
 
-## 5. Write a program that multiplies two positive numbers.
+### 5. Write a program that multiplies two positive numbers.
 
 * Usage: mul num1 num2
 * num1 and num2 will be passed in base 10
