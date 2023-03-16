@@ -2,6 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * *string_nconcat - function that concatenates two strings.
+ * @s1: first string 
+ * @s2: second string
+ * @n: number of bytes of s2 to concate
+ * 
+ * Return: NULL if s1 or s2 is NULL, if the function fail.
+ * pointer on the new array  
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 {
@@ -29,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < n; i++)
 		array[i + l1] = s2[i];
 
-	array[l1 + n + 1] = 0;
+	array[l1 + n] = 0;
 
 	return (array);
 
