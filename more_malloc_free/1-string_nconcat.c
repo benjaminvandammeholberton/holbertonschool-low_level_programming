@@ -4,12 +4,11 @@
 
 /**
  * *string_nconcat - function that concatenates two strings.
- * @s1: first string 
+ * @s1: first string
  * @s2: second string
  * @n: number of bytes of s2 to concate
- * 
  * Return: NULL if s1 or s2 is NULL, if the function fail.
- * pointer on the new array  
+ * pointer on the new array
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -20,11 +19,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int l2 = 0;
 	unsigned int i;
 
-	for (i = 0; s1[i] != 0; i++)
-		l1++;
+	if (s1 != NULL)
+		for (i = 0; s1[i] != 0; i++)
+			l1++;
 
-	for (i = 0; s2[i] != 0; i++)
-		l2++;
+	if (s2 != NULL)
+		for (i = 0; s2[i] != 0; i++)
+			l2++;
 
 	if (n > l2)
 		n = l2;
