@@ -4,7 +4,7 @@
 
 /**
   * print_strings - function that prints strings, followed by a new line
-  * @separator: string tto be printed between the strings
+  * @separator: string to be printed between the strings
   * @n: number of strings passed to the function
   */
 
@@ -17,10 +17,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n - 1; i++)
 	{
 		if (separator == NULL)
-			printf("%s", va_arg(ap, char *));
+			for (i = 0; i < n - 1; i++)
+				printf("%s", va_arg(ap, char *));
 
-		printf("%s", va_arg(ap, char *));
-		printf("%s", separator);
+		else
+			printf("%s", va_arg(ap, char *));
+			printf("%s", separator);
 	}
 	printf("%s", va_arg(ap, char *));
 	printf("\n");
