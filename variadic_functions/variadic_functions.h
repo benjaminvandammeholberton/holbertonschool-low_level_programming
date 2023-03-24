@@ -11,7 +11,7 @@
 typedef struct structure
 {
 	char *letter;
-	void (*f)();
+	void (*f)(va_list arg);
 } structure;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
