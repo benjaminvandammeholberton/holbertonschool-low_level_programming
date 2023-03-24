@@ -2,23 +2,26 @@
 #define VARIADI_FUNCTIONS_H
 
 #include <stdarg.h>
-
 /**
- * struct printer - A new struct type defining a printer.
- * @symbol: A symbol representing a data type.
- * @print: A function pointer to a function that prints
- *         a data type corresponding to symbol.
+ * struct structure - Array structure
+ *
+ * @letter: letter associated to the parameter passed
+ * @f: The function that print the parameter
  */
-typedef struct printer
+typedef struct structure
 {
-	char *symbol;
-	void (*print)(va_list arg);
-
-} printer_t;
-
+	char *letter;
+	void (*f)(va_list arg);
+} structure;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+void printInt(va_list ap);
+void printChar(va_list ap);
+void printFloat(va_list ap);
+void printString(va_list ap);
+
+
 
 #endif
