@@ -5,43 +5,41 @@
 
 /**
   * print_all - function that prints differents type of arguments
-  * @format: string reprsenting type of arguments
+  * @format: type of arguments
   */
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
+	va_list ap;
 	int i = 0, j = 0;
-	char *separator = "";
-	printer_t funcs[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
-	};
+	char *separator;
 
-	va_start(args, format);
+	structure mastructure[] = {
+		{"i", printInt},
+		{"f", printFloat},
+		{"c", printChar},
+		{"s", printString}
+		};
 
-	while (format && (*(format + i)))
+	va_start(ap, format);
+	separator = "";
+	while (format[i] != '\0')
 	{
 		j = 0;
-
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-			j++;
-
-		if (j < 4)
+		while (j < 4)
 		{
-			printf("%s", separator);
-			funcs[j].print(args);
-			separator = ", ";
+			if (format[i] == *mastructure[j].letter)
+			{
+				printf("%s", separator);
+				mastructure[j].f(ap);
+				separator = ", ";
+			}
+			j++;
 		}
-
 		i++;
 	}
-
 	printf("\n");
-
-	va_end(args);
+	va_end(ap);
 }
 
 /**
