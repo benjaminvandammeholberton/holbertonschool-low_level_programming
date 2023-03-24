@@ -21,8 +21,14 @@ void print_all(const char * const format, ...)
 		{"s", printString}
 		};
 
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 	va_start(ap, format);
 	separator = "";
+
 	while (format[i] != '\0')
 	{
 		j = 0;
