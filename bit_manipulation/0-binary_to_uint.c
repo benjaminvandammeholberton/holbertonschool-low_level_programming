@@ -46,7 +46,7 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; i < len; i++)
 	{
 		result = result + ((b[i] - '0') * _pow_recursion(2, power - 1));
-		power = len1 - 1;
+		power = power - 1;
 	}
 	return (result);
 }
