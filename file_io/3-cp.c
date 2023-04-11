@@ -39,9 +39,9 @@ int main (int argc, char **argv)
 
 	while (a != 0)
 	{	
-	write(file_to, buf, 1024);
-	a = read(file_from, buf, 1024);
 	
+	a = read(file_from, buf, 1024);
+	write(file_to, buf, a);
 	}
 	if (file_to == -1)
 		{
