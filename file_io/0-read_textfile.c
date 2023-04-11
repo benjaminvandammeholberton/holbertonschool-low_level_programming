@@ -31,11 +31,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 
-	read(fd, buff, letters);
-	for (i = 0; i < letters; i++)
-		putchar(buff[i]);
+	if (fd == -1)
+		return (0);
 
-    close(fd);
+	for (i = 0; i < letters; i++)
+	{
+		read(fd, buff, letters);
+		putchar(buff[i]);
+	}
+
+	close(fd);
+	free(buff);
 
 	return (letters);
 }
