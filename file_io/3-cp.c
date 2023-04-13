@@ -12,28 +12,21 @@
 
 int main(int argc, char **argv)
 {
-	int file_from, file_to, fd1, fd2;
-	char *buf;
-	int a = 1;
-
-	buf = malloc(1024);
-	if (buf == NULL)
-		return (-1);
+	int file_from, file_to, fd1, fd2, a = 1;
+	char *buf[1024];
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
-	file_from = open(argv[1], S_IRUSR | S_IWUSR);
-	file_to = creat(argv[2], 0644);
+	file_from = open(argv[1], S_IRUSR);
+	file_to = creat(argv[2], 0664);
 	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	while (a != 0)
 	{
 	a = read(file_from, buf, 1024);
@@ -45,7 +38,6 @@ int main(int argc, char **argv)
 		close(file_from);
 		exit(99);
 	}
-
 	fd1 = close(file_from);
 	if (fd1 == -1)
 	{
@@ -58,6 +50,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd2);
 		exit(100);
 	}
-	free(buf);
 	return (0);
 }
