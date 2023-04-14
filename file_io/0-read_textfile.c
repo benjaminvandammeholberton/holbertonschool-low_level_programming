@@ -4,8 +4,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-int _putchar(char c);
-
 /**
  * read_textfile - function that reads a text file and
  * prints it to the POSIX standard output
