@@ -5,9 +5,10 @@
 #include <fcntl.h>
 
 /**
- *
- *
- *
+ * main - function  that copie  the content of a file in another file
+ * @argc: nombre of arguments 
+ * @argv: arguments
+ * Return: 0 (Success)
  */
 
 int main(int argc, char **argv)
