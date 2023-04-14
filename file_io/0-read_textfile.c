@@ -38,23 +38,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes = read(fd, buff, letters);
 	for (i = 0; i < bytes; i++)
 	{
-		_putchar(buff[i]);
+		(write(STDOUT_FILENO, buff[i], 1));
 	}
 
 	close(fd);
 	free(buff);
 
 	return (bytes);
-}
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(STDOUT_FILENO, &c, 1));
 }
