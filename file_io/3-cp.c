@@ -6,7 +6,7 @@
 
 /**
  * main - function  that copie  the content of a file in another file
- * @argc: nombre of arguments 
+ * @argc: nombre of arguments
  * @argv: arguments
  * Return: 0 (Success)
  */
