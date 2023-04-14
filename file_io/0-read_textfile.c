@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	bytes = read(STDOUT_FILENO, buff, letters);
+	bytes = read(fd, buff, letters);
 	for (i = 0; i < bytes; i++)
 	{
 		putchar(buff[i]);
