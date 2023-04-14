@@ -4,6 +4,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+int _putchar(char c);
+
 /**
  * read_textfile - function that reads a text file and
  * prints it to the POSIX standard output
@@ -38,11 +40,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes = read(fd, buff, letters);
 	for (i = 0; i < bytes; i++)
 	{
-		putchar(buff[i]);
+		_putchar(buff[i]);
 	}
 
 	close(fd);
 	free(buff);
 
 	return (bytes);
+}
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(STDOUT_FILENO, &c, 1));
 }
